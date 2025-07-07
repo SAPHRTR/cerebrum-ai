@@ -50,6 +50,9 @@ Proje backlog’umuzun tamamına aşağıdaki bağlantıdan ulaşabilirsiniz:
 
 # Sprint 1
 
+## Sprint Notes
+  İlk sprint boyunca karşılaştığımız en zorlu problem tabiki mezuniyet projemizi seçmek oldu.İlk toplatımızdan sonra 3 günlük bir süre zarfında grubun her bir üyesi çeşitli veri setlerini taradı ,literatür araştırması yaptı ve yapay zekalardan da destek alarak yoğun bir şekilde konu bulma çabası gösterildi. Bu süre boyunca bulunan çeşitli verisetleri ve fikirler bir sonraki toplantıda değerlendirilmek üzere whatsapp grubunda paylaşıldı. İkinci toplantıda bu fikirler tek tek incelenerek bu sprinte de bahsedilen fikre ulaşıldı. Ardından bu proje için gerekli rol ve görev dağılımları kişilerin beceri ve isteklerine göre yapıldı. Toplantıdan sonraki ilk sprinte kadar olan süre zarfında herkes yaptığı işleri ve ilerlemelerini grup ile paylaştı. Sprintten önce son bir toplantı yapılarak projenin ilk etabı tamamlandı.Bu süreç boyunca özellikle uygun veri setini bulmak ve bu veriseti ile neler yapabileceğinin bulunması en zorlayıcı süreç oldu.
+
 ## Sprint İçi Puan Değerlendirmesi
 
 Sprint içi puan değerlendirmesi **100** olarak belirlenmiştir.  
