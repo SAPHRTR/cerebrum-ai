@@ -17,7 +17,7 @@ Grup 97
 Cerebrum AI
 
 # Ürün Logosu
-![Image](https://github.com/user-attachments/assets/bb4d0e5c-832c-436a-a1fc-c36f718dc4bd)
+<img width="180" height="180" alt="Image" src="https://github.com/user-attachments/assets/80ea18c9-be30-4157-8b70-4b01fc4f40c7" />
 
 # Ürün Açıklaması
 Cerebrum AI, kullanıcıların beyin tomografisi (BT) görüntülerini web arayüzü üzerinden yükleyerek, bu görüntüler üzerinden yapay zeka destekli hastalık tespiti yapmalarını sağlayan bir analiz platformudur.
@@ -48,7 +48,8 @@ Proje backlog’umuzun tamamına aşağıdaki bağlantıdan ulaşabilirsiniz:
 [Backlog Linki](https://trello.com/b/E7RErUz3/genai)
  
 
-# Sprint 1
+<details>
+  <summary><h1> Sprint 1</h1></summary>
 
 ## Sprint Notes
   İlk sprint boyunca karşılaştığımız en zorlu problem tabiki mezuniyet projemizi seçmek oldu.İlk toplatımızdan sonra 3 günlük bir süre zarfında grubun her bir üyesi çeşitli veri setlerini taradı ,literatür araştırması yaptı ve yapay zekalardan da destek alarak yoğun bir şekilde konu bulma çabası gösterildi. Bu süre boyunca bulunan çeşitli verisetleri ve fikirler bir sonraki toplantıda değerlendirilmek üzere whatsapp grubunda paylaşıldı. İkinci toplantıda bu fikirler tek tek incelenerek bu sprinte de bahsedilen fikre ulaşıldı. Ardından bu proje için gerekli rol ve görev dağılımları kişilerin beceri ve isteklerine göre yapıldı. Toplantıdan sonraki ilk sprinte kadar olan süre zarfında herkes yaptığı işleri ve ilerlemelerini grup ile paylaştı. Sprintten önce son bir toplantı yapılarak projenin ilk etabı tamamlandı.Bu süreç boyunca özellikle uygun veri setini bulmak ve bu veriseti ile neler yapabileceğinin bulunması en zorlayıcı süreç oldu.
@@ -112,6 +113,95 @@ Ekip, sprint hedeflerine uygun ilerleyerek proje temel yapı taşlarını oluşt
 - İletişim kanalları daha etkin kullanılacak.  
 - Test süreçleri sprint planına dahil edilecek.
 - Haftalık en az iki toplantı yapılacak.
+
+</details>
+
+<details>
+  <summary><h1> Sprint 2</h1></summary>
+
+## Sprint Notes
+  
+
+## Sprint İçi Puan Değerlendirmesi
+
+Sprint içi puan değerlendirmesi **100** olarak belirlenmiştir.  
+
+
+## Puan Tamamlama Mantığı
+
+Proje boyunca tamamlanması gereken toplam backlog puanı **330**'dur.  
+İkinci sprint için bitirilmesi istenilen puan sayısı en az **110** olarak belirlenmiştir.  
+
+Sprint hedefinin büyük kısmına ulaşılmış ve ilerleyen sprintlerde geri kalan işler planlı şekilde tamamlanacaktır.
+
+## Daily Scrum
+
+Günlük stand-up toplantılarımız **WhatsApp grubu** üzerinden yazılı ve **Google Meet** Toplantıları üzerinden görsel olarak gerçekleştirmeye devam ettik.  
+Ekip üyeleri proje ilerlemesini ve karşılaştıkları konuları düzenli olarak paylaşmış, işlerin takibi sağlanmıştır.
+
+Ekran görüntüleri için albüm linki:  
+[📷 Daily Scrum Görüntüleri (Sprint 1 Dahil)](https://imgur.com/a/grup-97-daily-scrum-G63vXZn)
+
+## Sprint Board
+
+Sprint Board Ekran Görüntüsü:
+
+<img width="854" height="730" alt="Image" src="https://github.com/user-attachments/assets/0ec5a558-2154-4473-85f5-aee0894277c2" />
+
+## Ürün Görselleri
+
+Güncel Ana Sayfa Görselimiz:
+
+<img width="535" height="309" alt="Image" src="https://github.com/user-attachments/assets/dfed05e4-af6e-47aa-9e7f-86aa562fa8b5" />
+
+---
+
+### Güncel Karmaşıklık Matrisi
+
+![Karmaşıklık Matrisi](https://github.com/user-attachments/assets/dccaba46-b35b-40ac-b7c4-a9a41b94ca77)
+
+---
+
+### Model Eğitimi Görüntüleri
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/8235f041-bfa6-4c17-922f-f9352a3a45f9" alt="Accuracy" width="45%" height="300px" />
+  <img src="https://github.com/user-attachments/assets/2f5494c4-2181-46d0-ab3b-8cfc7bd7b8f8" alt="Training Loss" width="45%" height="300px" />
+</p>
+
+---
+
+### Daha Fazla Görsel İçin
+
+[Tasarımlar](https://imgur.com/a/6lWC8Vl)
+
+---
+
+
+
+## Sprint Review
+
+- Hasta listeleri ve sonuç listeleri oluşturulmuştur.  
+- Doktor kaydının admin paneli üzerinden yapılmasına karar verilmiştir.  
+- Sisteme iki faktörlü doğrulama (2FA) eklenmiştir.  
+- Backend geliştirmesi için bu sprintte **Flask** teknolojisi tercih edilmiştir.  
+- Projeye entegre edilecek **yapay zeka unsurları** belirlenmiştir.  
+- Model üzerinde çeşitli **performans geliştirmeleri** sağlanmıştır.
+
+
+Model üzerinde performans geliştirmeleri sağlanmıştır.
+
+## Sprint Retrospective
+
+- Teknoloji seçimleri (Flask ve AI kararları) zamanında ve net yapıldı.  
+- Teknik görevler planlandığı şekilde tamamlandı.  
+- Model geliştirme süreci iyi yönetildi.  
+- Dokümantasyon ve görsel kayıtlar daha düzenli hale getirilmeli.  
+- Yapay zeka entegrasyonu için teknik hazırlık süreci sprint başlangıcına alınmalıydı.  
+- Takım içi teknik paylaşım oturumları planlanmalı.
+
+
+</details>
 
 
 
