@@ -1,5 +1,5 @@
 # Takım İsmi  
-Grup 97
+**Grup 97**
 
 # Takım Üyeleri
 
@@ -14,7 +14,7 @@ Grup 97
 
 
 # Ürün Adı 
-Cerebrum AI
+**Cerebrum AI**
 
 # Ürün Logosu
 <img width="180" height="180" alt="Image" src="https://github.com/user-attachments/assets/80ea18c9-be30-4157-8b70-4b01fc4f40c7" />
