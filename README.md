@@ -186,7 +186,7 @@ Güncel Ana Sayfa Görselimiz:
 - Hasta listeleri ve sonuç listeleri oluşturulmuştur.  
 - Doktor kaydının admin paneli üzerinden yapılmasına karar verilmiştir.  
 - Sisteme iki faktörlü doğrulama (2FA) eklenmiştir.  
-- Backend geliştirmesi için bu sprintte **Flask** teknolojisi tercih edilmiştir.  
+- Backend geliştirmesi için bu sprintte **Flask** teknolojisini dahil etme kararı alınmıştır.  
 - Projeye entegre edilecek **yapay zeka unsurları** belirlenmiştir.  
 - Model üzerinde çeşitli **performans geliştirmeleri** sağlanmıştır.
 
