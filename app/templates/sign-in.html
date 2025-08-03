@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}Cerebrum.AI{% endblock %}
+{% block page_stylesheet %}
+<link rel="stylesheet" href="{{ url_for('static', path='styles/sign-in.css') }}">
+{% endblock %}
+{% block content %}    
+    <div class="page">
+        <div class="left">
+            <img src="{{ url_for('static', path='img/sign-in-brains.jpeg') }}" alt="MRI images" class="mri-img" />
+        </div>
+        <div class="right">
+            <div class="nav">
+                <a id="about-link">About Us</a>
+            </div>
+            <div class="logo-group">
+                <img src="{{ url_for('static', path='img/cerebrum-logo.png') }}" alt="Logo" class="logo" /> 
+                <p class="subtitle">A Brain Surgeons Companion</p>
+            </div>
+            <form class="login-form" id = "login-form">
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="exampleuser@gmail.com" required />
+                </div>
+                <div>
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="example123." required />
+                </div>
+                <button type="submit" id="sign-in-btn">Sign In</button>
+                <a href="#" id="forgot-password-link" class="forgot">Forgot password?</a>            
+            </form>
+        </div>
+    </div>
+{% endblock %}
+{% block modals %}
+    {% include 'modals/about-us.html' %}
+{% endblock %}
+{% block script %}
+    <script type="module" src="{{ url_for('static', path='js/sign-in.js') }}"></script>
+{% endblock %}

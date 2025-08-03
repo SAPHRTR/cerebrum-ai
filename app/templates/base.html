@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    {% block page_stylesheet %}{% endblock %}
+    <link rel="icon" href="{{ url_for('static', path='img/favicon.png') }}" type="image/x-icon">
+</head>
+<body>
+    <header>
+        {% block header_content %}{% endblock %}
+    </header>
+    {% block content %}{% endblock %}
+    {% block modals %}{% endblock %}
+    {% block script %}{% endblock %}
+</body>
+</html>

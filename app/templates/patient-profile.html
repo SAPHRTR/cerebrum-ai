@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block title %}Patient Profile{% endblock %}
+{% block page_stylesheet %}
+<link rel="stylesheet" href="{{ url_for('static', path='styles/base.css') }}" />
+<link rel="stylesheet" href="{{ url_for('static', path='styles/patient-profile.css') }}">
+{% endblock %}
+{% block header_content %}
+  <a href="/scan-mri">
+    <div class="logo">
+        <img src="{{ url_for('static', path='img/cerebrum-logo.png') }}" alt="Cerebrum.AI Logo">
+    </div>
+    </a>
+    <nav>
+        <a href="/scan-mri">Scan</a>
+        <a href="/patient-list">Patients</a>
+        <div id="doctor-circle">
+            <img src="{{ url_for('static', path='img/doctor.png') }}" alt="doctor-icon">
+        </div>
+    </nav>
+{% endblock %}
+{% block content %}
+<main>
+  <h1>{{patient.name}} {{ patient.surname }}</h1>
+  <div class="container" role="main">
+    <div class="user-info-container">
+    <h2 id="userinfo-title">User Info</h2>
+    <section class="user-info" aria-labelledby="userinfo-title">
+      <p><strong>Gender:</strong> {{ patient.gender }}</p>
+      <p><strong>Height:</strong> {{patient.height}} cm</p>
+      <p><strong>Weight:</strong> {{patient.weight}} kg</p>
+      <p><strong>Age:</strong> {{patient.age}}</p>
+      <p><strong>Tumor Condition:</strong> Glioma</p>
+      <p><strong>Last Scan:</strong> 15.07.2025 - 12:53</p>
+      <p><strong>Total Scans:</strong> {{patient.total_scans}}</p>
+    </section>
+    </div>
+
+    <section class="results" aria-labelledby="results-title">
+      <h2 id="results-title">Results</h2>
+      <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>RID</th>
+            <th>Tumor Type</th>
+            <th>Result</th>
+            <th>Scanned On</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for result in results %}
+          <tr>
+            <td>{{result.order}}</td>
+            <td>{{result.tumor_type}}</td>
+            <td><a class="patient-result" data-id="{{ result.id }}">{{ result.name }}</a></td>
+            <td>{{result.scanned_on}}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    </section>
+  </div>
+</main>
+{% endblock %}
+{% block modals %}
+    {% include 'modals/result-modal.html' %}
+    {% include 'modals/doctor-modals.html' %}
+{% endblock %}
+{% block script %}
+  <script>
+    const STATIC_BASE_URL = "{{ url_for('static', path='') }}";
+  </script>
+  <script src="{{ url_for('static', path='js/patient-profile.js') }}"></script>
+  <script src="{{ url_for('static', path='js/base.js') }}"></script>
+{% endblock %}

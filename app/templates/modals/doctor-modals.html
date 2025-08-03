@@ -1,0 +1,59 @@
+<div id="doctor-info-modal" class="modal">
+      <div class="modal-content">
+          <span class="close-button" id="close-doctor-modal">&times;</span>
+          <h2 class="doctor-name" id="doctor-name">Example Doctor</h2>
+          <div class="description-section">
+              <p class="description-title">Description</p>
+              <div class="doctor-details-box">
+                  <p><strong>Institute:</strong> <span id="doctor-institution">Example Hospital</span></p>
+                  <p><strong>Title: </strong> <span id="doctor-title">Brain Surgeon</span></p>
+                  <p><strong>Patient Count: </strong> <span id="patient-count">1</span></p>
+                  <p><strong>Created On: </strong><span id="doctor-created-on">12.07.2025</span></p>
+              </div>
+          </div>
+          <div class="modal-actions">
+              <button class="modal-action-button" id="change-password-btn">Change Password</button>
+              <button class="modal-action-button" id="logout-button">Sign Out</button>
+              <button id="delete-account-btn" class="modal-action-button delete-account">Delete Account</button>
+          </div>
+      </div>
+</div>
+
+<div id="change-password-modal" class="modal">
+      <div class="modal-content">
+          <span class="close-button" id="close-password-modal">&times;</span>
+          <h2 class="modal-title">Change Password</h2>
+          <form id="change-password-form">
+              <div class="form-group">
+                  <label for="current-password">Current Password</label>
+                  <input type="password" id="current-password" required>
+              </div>
+              <div class="form-group">
+                  <label for="new-password">New Password</label>
+                  <input type="password" id="new-password" required>
+              </div>
+              <div class="form-group">
+                  <label for="confirm-password">Re-type Password</label>
+                  <input type="password" id="confirm-password" required>
+              </div>
+              <p id="password-message" style="margin-top: 8px; color: rgb(0, 0, 0); font-size: 0.9rem;"></p>
+              <button type="submit" class="submit-button">Change</button>
+          </form>
+      </div>
+</div>
+
+<div id="delete-account-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-button" id="close-delete-account-modal">&times;</span>
+        <h2 class="modal-title">Delete Account</h2>
+        <p>Are you sure you want to delete your account? This action cannot be undone and will delete all your patient and scan data.</p>
+        <form id="delete-account-form">
+            <div class="form-group">
+                <label for="delete-current-password">Enter Current Password</label>
+                <input type="password" id="delete-current-password" required>
+            </div>
+            <p id="delete-account-message" style="margin-top: 8px; color: rgb(0, 0, 0); font-size: 0.9rem;"></p>
+            <button type="submit" class="submit-button delete-button">Delete My Account</button>
+        </form>
+    </div>
+</div>

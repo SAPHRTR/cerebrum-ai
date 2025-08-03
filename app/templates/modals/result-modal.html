@@ -1,0 +1,20 @@
+<div class="result-modal-overlay" id="result-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="result-modal", id="result-modal">
+    <div class="result-modal-close" id="result-modal-close" aria-label="Close modal">&times;</div>
+    <h1 class="result-modal-title" id="result-title">Result 1001</h1>
+    <div class="result-modal-subtitle" id ="patient-name">12 - Example <strong>PATIENT</strong></div>
+    <div class="result-modal-line"></div>
+    <div class="result-modal-content">
+      <img src="{{ url_for('static', path='img/mri-placeholder.jpg') }}" alt="MRI Scan" class="result-modal-image" id="mri-image" />
+      <div class="result-modal-text">
+        <div class="tumor-type-label">Tumor Type: <strong id ="tumor-type-label">Glioma</strong></div>
+        <div class="tumor-rate-label">Prediction: <strong id ="tumor-rate-label">Glioma</strong>%</div>
+        <div class="tumor-description" id="tumor-description">
+          DESCRIPTION OF THE TUMOR (size etc.)<br>
+          AI IMAGE RECOGNITION CAN BE USED
+        </div>
+      </div>
+    </div>
+    <div class="scanned-on" id ="scanned-on">Scanned On: 17.07.2025</div>
+  </div>
+</div>

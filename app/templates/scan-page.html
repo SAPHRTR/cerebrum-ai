@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block title %}Scan MRI{% endblock %}
+{% block page_stylesheet %}
+<link rel="stylesheet" href="{{ url_for('static', path='styles/base.css') }}" />
+<link rel="stylesheet" href="{{ url_for('static', path='styles/scan-page.css') }}">
+{% endblock %}
+
+{% block header_content %}
+<a href="/scan-mri">
+    <div class="logo">
+        <img src="{{ url_for('static', path='img/cerebrum-logo.png') }}" alt="Cerebrum.AI Logo">
+    </div>
+</a>
+<nav>
+    <a href="/scan-mri" id="selected">Scan</a>
+    <a href="/patient-list">Patients</a>
+    <div id="doctor-circle">
+        <img src="{{ url_for('static', path='img/doctor.png') }}" alt="doctor-icon">
+    </div>
+</nav>
+{% endblock %}
+
+{% block content %}
+<main>
+    <section class="hero-section">
+        <div class="hero-content">
+            <img src="{{ url_for('static', path='img/page-brain-img.png') }}" alt="Beyin Görseli" class="brain-image">
+            <div class="text-content">
+                <h2>Detect Brain</h2>
+                <h2>Tumors</h2>
+            </div>
+        </div>
+        <div class="upload-section">
+            <form id="mri-form">
+                <h3>Upload Your MRI Scan</h3>
+                <p>Select a brain MRI Image <br>(JPG/PNG/DICOM) and click Analyze.</p>
+                <div class="form-group">
+                    <label for="patient-id">Patient ID:</label>
+                    <input type="text" id="patient-id" name="patient_id" required>
+                </div>
+                <div class="file-upload-box">
+                    <input type="file" id="mri-upload" name="file" accept=".jpg, .png, .dcm" required>
+                    <label for="mri-upload" class="file-label">Upload your file</label>
+                </div>
+                <button type="submit" class="analyze-button">Analyze</button>
+            </form>
+            <div id="upload-result"></div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p class="disclaimer">
+        <strong>Disclaimer:</strong> This prototype is for educational & research purposes only and is not approved for clinical diagnosis. Always consult a qualified medical professional for health decisions.
+    </p>
+</footer>
+{% endblock %}
+{% block modals %}
+    {% include 'modals/doctor-modals.html' %}
+{% endblock %}
+{% block script %}
+  <script src="{{ url_for('static', path='js/scan-page.js') }}"></script>
+  <script src="{{ url_for('static', path='js/base.js') }}"></script>
+{% endblock %}

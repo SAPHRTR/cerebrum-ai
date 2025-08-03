@@ -1,0 +1,36 @@
+<div class="edit-patient-modal-overlay" id="edit-patient-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="edit-patient-modal-title">
+  <div class="edit-patient-modal" id="edit-patient-modal">
+    <div class="edit-patient-modal-close" id="edit-patient-modal-close" aria-label="Close modal">&times;</div>
+    <h2 class="edit-patient-modal-title" id="edit-patient-modal-title">Edit Patient Info</h2>
+    <div class="edit-patient-modal-line"></div>
+    <form class="edit-patient-form">
+      <input type="hidden" id="edit-patient-id" />
+      <label>
+        Name
+        <input type="text" required placeholder="patient-name" id="edit-patient-name" />
+      </label>
+      <label>
+        Surname
+        <input type="text" required placeholder="patient-surname" id="edit-patient-surname" />
+      </label>
+      <label>
+        Height
+        <input type="number" required placeholder="patient-height" id="edit-patient-height" />
+      </label>
+      <label>
+        Weight
+        <input type="number" required placeholder="patient-weight" id="edit-patient-weight" />
+      </label>
+      <label>
+        Age
+        <input type="number" required placeholder="patient-age" id="edit-patient-age" />
+      </label>
+      <div class="edit-patient-gender-group">
+        <span><b>Gender:</b></span>
+        <label><input type="radio" name="edit-gender" value="male" /> Male</label>
+        <label><input type="radio" name="edit-gender" value="female" /> Female</label>
+      </div>
+      <button type="submit" class="edit-patient-submit-button">Update Patient</button>
+    </form>
+  </div>
+</div>

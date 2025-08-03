@@ -1,0 +1,238 @@
+body {
+  margin: 0;
+  font-family: "Poppins";
+  background-color: #fff;
+  color: #333;
+  height: 100vh;
+}
+
+.page {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+.left {
+  flex: 1;
+  background: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.mri-img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 12px;
+  margin-left: 150px;
+
+}
+
+.right {
+  flex: 1; /* sağ tarafı büyüttüm */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 80px;
+  position: relative;
+}
+
+.nav {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #504f4f;
+  font-size: 15px;
+}
+
+.logo-group {
+  display: flex;
+  flex-direction: column; /* Normalde görsel ve yazıyı alt alta sıralar */
+  align-items: center; /* Yatayda ortalar */
+  margin-bottom: 15px; /* Logo grubu ile form arasına boşluk */
+  position: relative; /* Bu, .subtitle için referans noktası oluşturur */
+}
+
+.logo-group .logo {
+  height: 120px; /* logonun yüksekliği */
+}
+
+.logo-group .subtitle {
+  position: absolute;
+  top: 78%; /* Alta kaydırır */
+  left: 58%; /* Sağa kaydırır */
+  transform: translate(-50%, -50%);
+  font-size: 14px; /* Daha küçük */
+  font-weight: 900; /* Daha kalın */
+  text-align: center;
+  line-height: 1.2;
+  white-space: nowrap;
+  color: #000000;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  margin-left: 35px;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-form label {
+  margin: 10px 0 5px;
+  display: flex;
+  font-weight: bold;
+  color: #504f4f;
+}
+
+.login-form input {
+  padding: 10px;
+  border: 1px solid #504f4f;
+  border-radius: 8px;
+  font-size: 14px;
+  width: 400px;
+  color: #504f4f;
+}
+
+.login-form input::placeholder {
+  color: #bfc1c2; /* Daha açık gri hint */
+  opacity: 1;
+}
+
+.login-form button {
+  margin-top: 18px;
+  padding: 10px 0;
+  background-color: #77b8eb;
+  width: 40%;
+  border: none;
+  color: white;
+  border-radius: 44px;
+  font-size: 22px;
+  font-family: Arial;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-form button:hover {
+    background-color: #4a90e2;
+    transform: translateY(-2px);
+}
+
+.login-form button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.forgot {
+  margin-top: 10px;
+  font-size: 12px;
+  text-align: center;
+  color: #444;
+  text-decoration: underline; /* Altını çizdik */
+  font-weight: bold;          /* Daha kalınlaştırdık */
+}
+
+/* ---------------------! About Us Modal !------------------------------ */
+
+#about-modal{
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height:100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+}
+
+#about-content {
+  position: relative; /* Needed for absolute positioning of the close button */
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 600px;
+  height: 400px;
+  max-width: 90%;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.3s ease-in-out;
+  font-size: 17px;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+#about-content h2 {
+    color: #b0d5f1;
+}
+
+#team-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%; 
+  flex-wrap: wrap;
+  font-size: 13px; 
+}
+
+#team-container a{
+  text-decoration: none;
+  text-decoration-color: black; 
+}
+
+.member-photo {
+  width: 100px;
+  height: 120px;
+  object-fit: cover; 
+  border-radius: 2px;
+}
+
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+  }
+  to {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+/* -----------------------! Header !-----------------------*/
+#about-link {
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+    font-size: large;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+#about-link:hover {
+    color: #b0d1f3;             
+}

@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff; /* Changed to white to match sign-in page */
+  font-family: 'Poppins', Arial, sans-serif;
+  color: #504f4f;
+}
+
+main {
+  padding: 30px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 50px;
+  margin-bottom: 20px;
+  color: #504f4f;
+  font-family:  Arial;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.table-controls {
+  display: flex;
+  justify-content: flex-end;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.add-btn {
+  background-color: #77b8eb;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 44px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  font-weight: 800;
+  margin-bottom: 10px;
+  transition: background 0.2s;
+}
+
+.add-btn:hover {
+  background-color: #99d0fa;
+}
+
+.table-wrapper {
+  width: 90%;
+  max-width: 1200px;
+  max-height: 400px;
+  overflow-y: auto;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 0;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+}
+
+/* TODO: Handle overflow-y! */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Poppins', Arial, sans-serif;
+  background-color: #fff;
+}
+
+th, td {
+  border: 1px solid #000;
+  padding: 10px;
+  text-align: center;
+  color: #000;
+  background-color: #fff;
+}
+
+th {
+  background-color: #fff;
+  color: #000;
+  font-weight: bold;
+}
+
+tr {
+  transition: background 0.2s;
+}
+
+tr:hover td {
+  background-color: #f2f2f2 !important;
+}
+
+th:first-child,
+td:first-child {
+  width: 15%; 
+}
+
+/* ---------------! Add Patient Modal !-------------- */
+
+
+.add-patient-modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-patient-modal {
+  background: #fff;
+  border-radius: 16px;
+  width: 360px;
+  padding: 24px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+  position: relative;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.add-patient-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 22px;
+  color: #666;
+  cursor: pointer;
+}
+
+.add-patient-modal-title {
+  text-align: center;
+  font-size: 35px;
+  font-family: Arial;
+  font-weight: 800;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.add-patient-modal-line {
+  border-top: 1px solid #ccc;
+  margin-bottom: 16px;
+}
+
+.add-patient-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.add-patient-form label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #444;
+  display: flex;
+  flex-direction: column;
+}
+
+.add-patient-form input[type="text"],
+.add-patient-form input[type="number"] {
+  border: 2px solid #ddd;
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-size: 14px;
+  color: #555;
+  outline: none;
+}
+
+.add-patient-form input::placeholder {
+  color: #ccc;
+}
+.add-patient-gender-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.add-patient-gender-group input[type="radio"] {
+  accent-color: #444;
+  margin-left: 8px;
+  margin-right: 4px;
+  display: flex;
+}
+
+.add-patient-submit-button {
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 24px;
+  background-color: #66c3f9;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.add-patient-submit-button:hover {
+  background-color: #4daee2;
+}
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+  }
+  to {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+/* -------------------- Edit Patient Modal -------------------- */
+.edit-patient-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.edit-patient-modal {
+  background-color: white;
+  border-radius: 20px;
+  padding: 40px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 0.3s ease;
+}
+
+.edit-patient-modal-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  color: #999;
+  cursor: pointer;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+.edit-patient-modal-close:hover {
+  color: #333;
+}
+
+.edit-patient-modal-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.edit-patient-modal-line {
+  height: 2px;
+  background-color: #77b8eb;
+  margin-bottom: 30px;
+}
+
+.edit-patient-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.edit-patient-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  color: #333;
+  gap: 8px;
+}
+
+.edit-patient-form input[type="text"],
+.edit-patient-form input[type="number"] {
+  padding: 12px;
+  border: 2px solid #e1e1e1;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.2s;
+}
+
+.edit-patient-form input[type="text"]:focus,
+.edit-patient-form input[type="number"]:focus {
+  outline: none;
+  border-color: #77b8eb;
+}
+
+.edit-patient-gender-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.edit-patient-gender-group input[type="radio"] {
+  accent-color: #444;
+  margin-left: 8px;
+  margin-right: 4px;
+  display: flex;
+}
+
+.edit-patient-submit-button {
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 24px;
+  background-color: #66c3f9;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.edit-patient-submit-button:hover {
+  background-color: #4daee2;
+}

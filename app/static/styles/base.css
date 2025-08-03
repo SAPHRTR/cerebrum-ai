@@ -1,0 +1,332 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #fbfcfc; /* Kept this as it's from scan-page and close to white */
+    height: 50px;
+}
+
+header #doctor-circle {
+  border-radius: 50%;
+  width: 60px;
+  aspect-ratio: 1 / 1;
+  background: linear-gradient(135deg, #dff7f7, #b8d5f2); /* Reverted to original gradient background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: background-color 0.3s ease, transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+header #doctor-circle:hover {
+  transform: scale(1.1);
+}
+
+header #doctor-circle img {
+  width: 70%;
+  height: auto;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    height: 70px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+    font-size: large;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: #b0d1f3;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+header nav a:hover {
+    color: #4a90e2;
+}
+
+#selected{
+    width: fit-content;
+    background-color: #b0d1f3;
+    border-radius: 30px;
+    border-width: 5px 10px;
+    border-style: solid;
+    border-color: #b0d1f3;
+    color: white;
+    transition: background-color 0.5s ease, border-color 0.5s ease;
+}
+#selected:hover {
+    background-color: #7a9fcd;
+    border-color: #7a9fcd;
+}
+
+
+/* Doctor Info Modal */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    justify-content: center;
+    align-items: center; /* This centers the modal content vertically and horizontally when display is flex */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 350px; /* Adjust max-width to match the image */
+    border-radius: 13px; /* More rounded corners */
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    animation: animatetop 0.4s;
+    font-family: 'Poppins', Arial, sans-serif; /* Consistent font */
+}
+
+/* Add Animation */
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+
+.close-button {
+    color: #000000;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute; /* Position relative to modal-content */
+    top: 10px;
+    right: 20px;
+}
+
+.doctor-name {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #504f4f; /* Darker color for the name */
+}
+
+.description-section {
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.description-title {
+    font-size: 14px;
+    color: #504f4f;
+    margin-bottom: 5px;
+}
+
+.doctor-details-box {
+    background-color: #e6f7ff; /* Light blue background for the details box */
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.doctor-details-box p {
+    margin: 5px 0;
+    font-size: 15px;
+    color: #000000;
+}
+
+.modal-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between buttons */
+}
+
+.modal-action-button {
+    background-color: transparent;
+    border: none;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #504f4f;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    width: 100%; /* Full width for buttons */
+    border-top: 1px solid #ddd; /* Separator line */
+}
+
+.modal-action-button:hover {
+    background-color: #f0f0f0;
+}
+
+.delete-account {
+    color: red; /* Red color for delete button */
+    font-weight: bold;
+}
+
+.delete-account:hover {
+    background-color: #ffe6e6; /* Light red background on hover */
+}
+
+/* Change Password Modal Specific Styles */
+#change-password-modal .modal-content {
+    max-width: 380px; /* Kutucuğu küçültmek için ayarlandı */
+    padding: 25px; /* İç boşluk azaltıldı */
+}
+
+#change-password-modal .modal-title {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 25px;
+    color: #333;
+    font-weight: bold;
+}
+
+#change-password-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+    font-size: 15px;
+}
+
+.form-group input {
+    padding: 10px; /* Input kutularının yüksekliği azaltıldı */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px; /* Input font boyutu ayarlandı */
+    width: calc(100% - 20px); /* Padding'i hesaba katmak için düzeltildi (2*10px padding) */
+}
+
+.submit-button {
+    background-color: #6daee7;
+    color: white;
+    padding: 10px 0; /* Butonun yüksekliği ayarlandı, yatay padding kaldırıldı */
+    border: none;
+    border-radius: 30px; /* Daha yuvarlak kenarlar */
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    align-self: center;
+    width: 80%; /* Buton daha geniş yapıldı */
+}
+
+.submit-button:hover {
+    background-color: #4a90e2;
+    transform: translateY(-2px);
+}
+
+.submit-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Delete Account Modal Specific Styles */
+#delete-account-modal .modal-content {
+    max-width: 380px; /* Kutucuğu küçültmek için ayarlandı */
+    padding: 25px; /* İç boşluk azaltıldı */
+}
+
+#delete-account-modal .modal-title {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 25px;
+    color: #333;
+    font-weight: bold;
+}
+
+#delete-account-modal form {
+    display: flex; /* Formu flex container yapar */
+    flex-direction: column; /* İçindeki elementleri dikey sıralar */
+    gap: 15px;
+    align-items: center; /* Elementleri dikeyde ortalar (isteğe bağlı) */
+}
+
+#delete-account-modal .form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%; /* Form grubunun tam genişlikte olmasını sağlar */
+}
+
+#delete-account-modal .form-group label {
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+    font-size: 15px;
+}
+
+#delete-account-modal .form-group input {
+    padding: 10px; /* Input kutularının yüksekliği azaltıldı */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px; /* Input font boyutu ayarlandı */
+    width: calc(100% - 20px); /* Padding'i hesaba katmak için düzeltildi (2*10px padding) */
+}
+
+#delete-account-modal #delete-account-message {
+    margin-top: 8px;
+    color: rgb(0, 0, 0);
+    font-size: 0.9rem;
+    text-align: center; /* Mesajı da ortalar (isteğe bağlı) */
+}
+
+#delete-account-modal .submit-button.delete-button {
+    background-color: #ff4d4d; /* Kırmızı renk */
+    color: white;
+    padding: 10px 20px; /* Yatay padding eklendi */
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    width: fit-content; 
+}
+
+#delete-account-modal .submit-button.delete-button:hover {
+    background-color: #cc0000; /* Daha koyu kırmızı */
+    transform: translateY(-2px);
+}
+
+#delete-account-modal .submit-button.delete-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+

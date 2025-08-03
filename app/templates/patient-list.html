@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block title %}Patient List{% endblock %}
+{% block page_stylesheet %}
+  <link rel="stylesheet" href="{{ url_for('static', path='styles/base.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', path='styles/patient-list.css') }}" />
+{% endblock %}
+{% block header_content %}
+<a href="/scan-mri">
+    <div class="logo">
+        <img src="{{ url_for('static', path='img/cerebrum-logo.png') }}" alt="Cerebrum.AI Logo">
+    </div>
+</a>
+<nav>
+    <a href="/scan-mri">Scan</a>
+    <a href="/patient-list" id="selected">Patients</a>
+    <div id="doctor-circle">
+        <img src="{{ url_for('static', path='img/doctor.png') }}" alt="doctor-icon">
+    </div>
+</nav>
+{% endblock %}
+{% block content %}
+  <main>
+  <h1>Patient List</h1>
+  <div class="table-controls">
+    <button class="add-btn" id="add-patient-btn">Add Patient</button>
+  </div>
+  <div class="table-wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th>PID</th>
+          <th>Patient</th>
+          <th>Last Scan</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for patient in patients %}
+        <tr>
+          <td>{{ patient.id }}</td>
+          <td>
+            <span class="ops">
+            <img src="{{ url_for('static', path='img/edit.png') }}" alt="Edit" style="width:18px;vertical-align:middle;cursor:pointer;margin-right:10px;" onclick="editPatient('{{ patient.id }}', '{{ patient.name }}', '{{ patient.surname }}')">
+            <img src="{{ url_for('static', path='img/delete.png') }}" alt="Delete" style="width:20px;vertical-align:middle;cursor:pointer;" onclick="deletePatient('{{ patient.id }}', '{{ patient.name }} {{ patient.surname }}')">
+            </span>
+            <a href="/patient-profile/{{ patient.id }}">
+            {{ patient.name }} {{ patient.surname }}
+            </a>
+          </td>
+          <td>{{patient.last_scan}}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</main>
+{% endblock %}
+{% block modals %}
+    {% include 'modals/edit-patient.html' %}
+    {% include 'modals/add-patient.html' %}
+    {% include 'modals/doctor-modals.html' %}
+{% endblock %}
+{% block script %}
+  <script src="{{ url_for('static', path='js/patient-list.js') }}"></script>
+  <script src="{{ url_for('static', path='js/base.js') }}"></script>
+{% endblock %}
